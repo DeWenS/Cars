@@ -4,6 +4,10 @@ var mongoose = require('mongoose');
 var Location = require('../models/location');
 //var io = require('socket.io-emitter')();
 
+router.get('/', function(req, res){
+  res.render('api', {});
+});
+
 router.post('/location', function(req, res){
   var lat = parseFloat(req.body.lat);
   var lng = parseFloat(req.body.lng);

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    .container
+        h1 API
+        table.table
+            tr
+                td POST
+                td /api/location
+                td Add location to db
+                    pre POST fields
+                        | id: Id of device (can be advertising id) (float)
+                        | lat: Latitude (float - 43.5467)
+                        | lng: Longitude (float - 45.3214)
+                        | acc: Accuracy (meters) (integer)
