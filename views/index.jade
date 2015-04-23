@@ -3,7 +3,13 @@ extends layout
 block content
     .container
         if (!user)
-
+            .jumbotron
+                h1 Meet new location watcher
+                p.lead Innovative and motivative text is placed here!
+                p
+                    a.btn.btn-lg.btn-primary(href="/login") Login
+                    | &nbsp;or&nbsp;
+                    a.btn.btn-lg.btn-success(href="/register") Register
         if (user)
             script.
                 var socket = io.connect('http://localhost:3000');
